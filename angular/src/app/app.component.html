@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="row d-flex">
+    <div class="col d-flex justify-content-end">
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item px-2">
+            <a class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLinkActive="active">
+              Sign Up
+            </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLinkActive="active">
+              Login
+            </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLinkActive="active">
+              Cart
+            </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLinkActive="active">
+              Wish List
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around" id="header">
+    <div class="col-3 border border-dark">
+      <img class="border border-dark" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
+    </div>
+    <div class="col-6 border border-dark">
+      <h1 class="display-1 text-center">Yo-Yo Kingdom</h1>
+      <p class="lead text-center">The World's #1 Yo-Yo store!</p>
+    </div>
+    <div class="col-3 border border-dark">
+      <img class="border border-dark" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
+    </div>
+  </div>
+  <div class="row d-flex">
+    <div class="col d-flex justify-content-center">
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <ul class="navbar-nav mr-auto h4">
+          <li class="nav-item px-4">
+            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              Home
+            </a>
+          </li>
+          <li class="nav-item px-4">
+            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/profile" routerLinkActive="active">
+              Profile
+            </a>
+          </li>
+          <li class="nav-item px-4">
+            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/yo-yos" routerLinkActive="active">
+              Yo-Yo's
+            </a>
+          </li>
+          <li class="nav-item px-4">
+            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/cart" routerLinkActive="active">
+              My Cart
+            </a>
+          </li>
+          <li class="nav-item px-4">
+            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/about" routerLinkActive="active">
+              About Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="row my-5 d-flex justify-content-center" id="footer">
+    <div class="col-3 border border-dark">
+      <img class="border border-dark" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
+    </div>
+    <div class="col-6 d-flex justify-content-center border border-dark">
+      <div class="d-flex flex-column">
+        <h5 class="text-center">Customer Service</h5>
+        <br>
+        <p class="text-center">Contact Us</p>
+        <p class="text-center">Returns</p>
+      </div>
+    </div>
+    <div class="col-3 border border-dark">
+      <img class="border border-dark" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
+    </div>
+  </div>
+</div>
+<!-- Color Scheme: #4dff4d, #ffff66,#262626, #fff -->
