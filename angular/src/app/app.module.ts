@@ -1,14 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { YoYosComponent } from './components/yo-yos/yo-yos.component';
-
-import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
+
+import { AppRoutingModule } from './app-routing.module';
+
+import { InventoryService } from './services/inventory.service';
+import { YoyoDetailComponent } from './components/yoyo-detail/yoyo-detail.component';
 
 
 @NgModule({
@@ -18,13 +26,19 @@ import { CartComponent } from './components/cart/cart.component';
     YoYosComponent,
     ProfileComponent,
     AboutComponent,
-    CartComponent
+    CartComponent,
+    SignUpComponent,
+    LoginComponent,
+    AdminComponent,
+    YoyoDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ InventoryService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

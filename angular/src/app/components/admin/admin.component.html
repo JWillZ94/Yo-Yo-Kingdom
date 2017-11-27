@@ -1,0 +1,56 @@
+<div class="container">
+  <h3>Add Another Yo-Yo</h3>
+  <form (ngSubmit)="saveYoYo()" #yoyoForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name: </label>
+      <input type="text" class="form-control" [(ngModel)]="yoyo.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Description: </label>
+      <input type="text" class="form-control" [(ngModel)]="yoyo.description" name="description" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Cost: </label>
+      <input type="number" class="form-control" [(ngModel)]="yoyo.cost" name="cost" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Value: </label>
+      <input type="number" class="form-control" [(ngModel)]="yoyo.value" name="value" required>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm.form.valid">Add</button>
+    </div>
+  </form>
+  <h3>Update Existing Yo-Yo</h3>
+  <form>
+    <div class="form-group">
+      <label for="">Id: </label>
+      <input type="text">
+    </div>
+    <div class="form-group">
+      <label for="">Name: </label>
+      <input type="text">
+    </div>
+    <div class="form-group">
+      <label for="">Description: </label>
+      <input type="text">
+    </div>
+    <div class="form-group">
+      <label for="">Cost: </label>
+      <input type="number">
+    </div>
+    <div class="form-group">
+      <label for="">Value: </label>
+      <input type="number">
+    </div>
+    <div class="form-group">
+      <button>Update</button>
+    </div>
+  </form>
+  <h3>Delete Yo-Yo</h3>
+  <form>
+    <label for="">Id: </label>
+    <input type="text">
+  </form>
+  <button>Delete</button>
+</div>

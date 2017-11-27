@@ -7,6 +7,10 @@ import { YoYosComponent } from './components/yo-yos/yo-yos.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { YoyoDetailComponent } from './components/yoyo-detail/yoyo-detail.component';
 
 const routes: Routes = [
   {
@@ -28,6 +32,22 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'signup',
+    component: SignUpComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
+  },
+  {
+    path: 'yoyo-details/:id',
+    component: YoyoDetailComponent
   }
 ];
 

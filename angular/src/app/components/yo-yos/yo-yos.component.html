@@ -1,29 +1,13 @@
 <div class="container">
   <h3 class="text-center py-4">Yo-Yo's!</h3>
   <div class="row py-5 d-flex justify-content-around border border-dark">
-    <div class="col-3 flex-column border border-dark">
-      <img class="border border-dark" src="" alt="yo yo img" height="250px" width="250px">
-      <p>Green Machine</p> <!-- Make all of these available from back-end -->
-      <p>Cost: $5</p>
-      <p>Description: Typical green yo-yo</p> <!-- Make into pop-over when clicked on -->
-      <p>Cool Points: 35/100</p>
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="yo yo img" height="250px" width="250px">
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="yo yo img" height="250px" width="250px">
-    </div>
-  </div>
-  <div class="row py-5 d-flex justify-content-around border border-dark">
-    <div class="col-3 d-flex border border-dark">
-      <img src="" alt="yo yo img" height="250px" width="250px">
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="yo yo img" height="250px" width="250px">
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="yo yo img" height="250px" width="250px">
-    </div>
+    <ul *ngFor="let yoyo of yoyos" class="col-3 border border-dark">
+      <a routerLink="/yoyo-details/:id"><img class="border border-dark" src="" alt="yo yo img"></a>
+      <li><a routerLink="/yoyo-details/:id">{{yoyo.name}}</a></li>
+      <li>{{yoyo.description}}</li>
+      <li>Price: ${{yoyo.cost}}</li>
+      <li>Value: {{yoyo.value}}/100</li>
+      <button>Add to Cart</button>
+    </ul>
   </div>
 </div>
