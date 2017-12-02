@@ -28,13 +28,13 @@ app.use(bodyParser.urlencoded({extended: false})); // body-parser middleware
 // Angular output folder that express will access
 app.use(express.static(path.join(__dirname, 'dist'))); // connects this server to the dist folder in angular, connects B-E to F-E
 
+// API Location
+app.use('/yoyo', yoyo); // puts this API part on /yoyo
+
 // Send all other requests to angular app
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
-
-// API Location
-app.use('/yoyo', yoyo); // puts this API part on /yoyo
 
 app.set('json spaces', 2); // makes the json formatted info pretty
 

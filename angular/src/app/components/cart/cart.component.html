@@ -11,25 +11,12 @@
     </div>
   </div>
   <div class="row py-5 d-flex justify-content-around border border-dark">
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="img of yo-yo thats in cart" height="250px" width="250px">
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="img of yo-yo thats in cart" height="250px" width="250px">
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="img of yo-yo thats in cart" height="250px" width="250px">
-    </div>
-  </div>
-  <div class="row py-5 d-flex justify-content-around border border-dark">
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="img of yo-yo thats in cart" height="250px" width="250px">
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="img of yo-yo thats in cart" height="250px" width="250px">
-    </div>
-    <div class="col-3 flex-column border border-dark">
-      <img src="" alt="img of yo-yo thats in cart" height="250px" width="250px">
-    </div>
+    <ul *ngFor="let yoyo of addToCartService.yoyoCart" class="col-3 border border-dark">
+      <a routerLink="/yoyo-details/:id"><img class="border border-dark" src="" alt="yo yo img"></a>
+      <li><a routerLink="/yoyo-details/:id">{{yoyo.name}}</a></li>
+      <li>{{yoyo.description}}</li>
+      <li>Price: ${{yoyo.cost}}</li>
+      <li>Value: {{yoyo.value}}/100</li>
+    </ul>
   </div>
 </div>

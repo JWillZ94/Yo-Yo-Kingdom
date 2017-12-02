@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class YoyoDetailComponent implements OnInit {
   yoyo = {};
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.getYoYoDetail(this.route.snapshot.params['id']);
@@ -20,6 +20,12 @@ export class YoyoDetailComponent implements OnInit {
   getYoYoDetail(id) {
     this.http.get('http://localhost:3000/yoyo/' + id).subscribe(data => {
       this.yoyo = data;
+    },
+    (err: HttpErrorResponse) => { // Error handling, splits into client-side problems or server-side problems
+      if (err.error instanceof Error) {
+        console.log('Client-side error happened');
+      }
+      console.log('Server-side error happened');
     });
   }
 

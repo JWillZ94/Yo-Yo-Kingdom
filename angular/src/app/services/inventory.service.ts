@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import 'rxjs/add/operator/map';
 
 @Injectable()
 export class InventoryService {
-  yoyoinfo: any;
 
   constructor(private http: HttpClient) {
-    
+
   }
 
-  /*getYoYos() {
-    return this.http.get('/api/yoyo')
-      .map(yoyoinfo => this.yoyoinfo = yoyoinfo.json().data);
-  }*/
+  getYoYos() { // Grabs the yoyos from the back-end API and brings them to this service
+    return this.http.get('http://localhost:3000/yoyo');
+  }
+
+  getYoYo() {
+
+  }
 
 }

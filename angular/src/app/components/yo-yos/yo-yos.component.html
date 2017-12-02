@@ -2,12 +2,12 @@
   <h3 class="text-center py-4">Yo-Yo's!</h3>
   <div class="row py-5 d-flex justify-content-around border border-dark">
     <ul *ngFor="let yoyo of yoyos" class="col-3 border border-dark">
-      <a routerLink="/yoyo-details/:id"><img class="border border-dark" src="" alt="yo yo img"></a>
-      <li><a routerLink="/yoyo-details/:id">{{yoyo.name}}</a></li>
+      <a routerLink="/yoyo-details/{{yoyo._id}}"><img class="border border-dark" src="" alt="yo yo img"></a>
+      <li><a routerLink="/yoyo-details/{{yoyo._id}}">{{yoyo.name}}</a></li>
       <li>{{yoyo.description}}</li>
       <li>Price: ${{yoyo.cost}}</li>
       <li>Value: {{yoyo.value}}/100</li>
-      <button>Add to Cart</button>
+      <button (click)="addToCart(yoyo)">Add to Cart</button> <!-- On click event, it runs the addToCart method with yoyo passed in to react to the specific yoyo thats clicked on -->
     </ul>
   </div>
 </div>
