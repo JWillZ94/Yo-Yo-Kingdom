@@ -20,3 +20,5 @@ const yoyoSchema = mongoose.Schema({ // The schema, or frame for the info of the
 });
 
 const YoYo = module.exports = mongoose.model('YoYo', yoyoSchema); // Allows this model schema to be accessed from outside
+
+exports.YoYo = YoYo; // For the angular services in typescript to receive

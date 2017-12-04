@@ -11,9 +11,9 @@
     </div>
   </div>
   <div class="row py-5 d-flex justify-content-around border border-dark">
-    <ul *ngFor="let yoyo of addToCartService.yoyoCart" class="col-3 border border-dark">
-      <a routerLink="/yoyo-details/:id"><img class="border border-dark" src="" alt="yo yo img"></a>
-      <li><a routerLink="/yoyo-details/:id">{{yoyo.name}}</a></li>
+    <ul *ngFor="let yoyo of yoyoCart" class="col-3 border border-dark">
+      <a routerLink="/yoyo-details/{{yoyo._id}}"><img class="border border-dark" src="" alt="yo yo img"></a>
+      <li><a routerLink="/yoyo-details/{{yoyo._id}}">{{yoyo.name}}</a></li>
       <li>{{yoyo.description}}</li>
       <li>Price: ${{yoyo.cost}}</li>
       <li>Value: {{yoyo.value}}/100</li>

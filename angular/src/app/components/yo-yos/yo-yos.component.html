@@ -9,5 +9,9 @@
       <li>Value: {{yoyo.value}}/100</li>
       <button (click)="addToCart(yoyo)">Add to Cart</button> <!-- On click event, it runs the addToCart method with yoyo passed in to react to the specific yoyo thats clicked on -->
     </ul>
+    <ul *ngFor="let yo of yoyoCart">
+      <li>{{yo.name}}</li>
+      <li>{{yo.description}}</li>
+    </ul>
   </div>
 </div>

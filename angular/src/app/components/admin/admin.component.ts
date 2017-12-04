@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { InventoryService } from '../../services/inventory.service';
 
 @Component({
   selector: 'app-admin',
@@ -11,41 +12,25 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
   yoyo = {};
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private inventoryService: InventoryService, private route: ActivatedRoute) { }
 
   ngOnInit() {
 
   }
 
-  saveYoYo() {
+  addYoYo() { // Transfer to service
     this.http.post('http://localhost:3000/yoyo', this.yoyo)
-      .subscribe(res => {
-        let id = res['_id'];
-        this.router.navigate(['/yoyo-details', id]); // Goes to this route after it gets the job done
-      }, (err) => {
-        console.log(err);
-      });
+      .subscribe(res => this.router.navigate(['/yo-yos']));
   }
 
-  updateYoYo(id, data) {
-    this.http.put('http://localhost:3000/yoyo/' + id, data)
-      .subscribe(res => {
-        let id = res['_id'];
-        this.router.navigate(['/yoyo-details', id]);
-      }, (err) => {
-        console.log(err);
-      }
-    );
+  updateYoYo(id) { // cant get it to change the yoyo
+    this.inventoryService.updateYoYo(this.yoyo.id)
+      .subscribe(res => this.router.navigate(['/yoyo-details/' + this.yoyo.id]));
   }
 
   deleteYoYo(id) {
-    this.http.delete('http://localhost:3000/yoyo/' + id)
-      .subscribe(res => {
-        this.router.navigate(['/yo-yos']);
-      }, (err) => {
-        console.log(err);
-      }
-    );
+    this.inventoryService.deleteYoYo(this.yoyo.id)
+      .subscribe(res => this.router.navigate(['/yo-yos']));
   }
 
 }

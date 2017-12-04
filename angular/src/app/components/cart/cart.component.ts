@@ -7,13 +7,17 @@ import { AddToCartService } from '../../services/add-to-cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  yoyoCart: any;
+  yoyoCart: any = [];
 
 
   constructor(private addToCartService: AddToCartService) { }
 
   ngOnInit() {
-    //this.yoyoCart = this.addToCartService.addToCart(yoyo);
+    this.yoyosInCart();
+  }
+
+  yoyosInCart() {
+    this.addToCartService.yoyosInCart();
   }
 
 }

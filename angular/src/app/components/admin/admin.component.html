@@ -1,20 +1,20 @@
 <div class="container">
-  <h3>Add Another Yo-Yo</h3>
-  <form (ngSubmit)="saveYoYo()" #yoyoForm="ngForm">
+  <h3>Add Another Yo-Yo</h3> <!-- All the forms share the same input, must change -->
+  <form (ngSubmit)="addYoYo()" #yoyoForm="ngForm">
     <div class="form-group">
       <label for="name">Name: </label>
       <input type="text" class="form-control" [(ngModel)]="yoyo.name" name="name" required>
     </div>
     <div class="form-group">
-      <label for="name">Description: </label>
+      <label for="description">Description: </label>
       <input type="text" class="form-control" [(ngModel)]="yoyo.description" name="description" required>
     </div>
     <div class="form-group">
-      <label for="name">Cost: </label>
+      <label for="cost">Cost: </label>
       <input type="number" class="form-control" [(ngModel)]="yoyo.cost" name="cost" required>
     </div>
     <div class="form-group">
-      <label for="name">Value: </label>
+      <label for="value">Value: </label>
       <input type="number" class="form-control" [(ngModel)]="yoyo.value" name="value" required>
     </div>
     <div class="form-group">
@@ -22,9 +22,9 @@
     </div>
   </form>
   <h3>Update Existing Yo-Yo</h3>
-  <form (ngSubmit)="updateYoYo()" #yoyoForm="ngForm">
+  <form (ngSubmit)="updateYoYo(id)" #yoyoForm="ngForm">
     <div class="form-group">
-      <label for="name">Id: </label>
+      <label for="id">Id: </label>
       <input type="text" class="form-control" [(ngModel)]="yoyo.id" name="id" required>
     </div>
     <div class="form-group">
@@ -32,15 +32,15 @@
       <input type="text" class="form-control" [(ngModel)]="yoyo.name" name="name" required>
     </div>
     <div class="form-group">
-      <label for="name">Description: </label>
+      <label for="description">Description: </label>
       <input type="text" class="form-control" [(ngModel)]="yoyo.description" name="description" required>
     </div>
     <div class="form-group">
-      <label for="name">Cost: </label>
+      <label for="cost">Cost: </label>
       <input type="number" class="form-control" [(ngModel)]="yoyo.cost" name="cost" required>
     </div>
     <div class="form-group">
-      <label for="name">Value: </label>
+      <label for="value">Value: </label>
       <input type="number" class="form-control" [(ngModel)]="yoyo.value" name="value" required>
     </div>
     <div class="form-group">
@@ -48,10 +48,10 @@
     </div>
   </form>
   <h3>Delete Yo-Yo</h3>
-  <form (ngSubmit)="deleteYoYo()" #yoyoForm="ngForm">
+  <form (ngSubmit)="deleteYoYo(id)" #yoyoForm="ngForm">
     <div class="form-group">
-      <label for="name">Id: </label>
-      <input type="text" class="form-control" [(ngModel)]="yoyo.id" name="name" required>
+      <label for="id">Id: </label>
+      <input type="text" class="form-control" [(ngModel)]="yoyo.id" name="id" required>
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm.form.valid">Delete</button>

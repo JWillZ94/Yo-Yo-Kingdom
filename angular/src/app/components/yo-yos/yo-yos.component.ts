@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { AddToCartService } from '../../services/add-to-cart.service';
 import { InventoryService } from '../../services/inventory.service';
 import { CartComponent } from '../cart/cart.component';
+import { YoYo } from '../../../models/YoYo';
 
 @Component({ // Child to CartComponent
   selector: 'app-yo-yos',
@@ -12,6 +13,7 @@ import { CartComponent } from '../cart/cart.component';
 export class YoYosComponent implements OnInit {
   yoyos: any;
   yoyoCart: any = [];
+  yoyo: YoYo;
 
 
   constructor(private http: HttpClient, private inventoryService: InventoryService, private addToCartService: AddToCartService) { // uses HttpClient for this component, in this example, connecting to the back-end
@@ -19,8 +21,6 @@ export class YoYosComponent implements OnInit {
 
   ngOnInit() {
     this.getYoYos();
-
-    //this.yoyoCart = this.addToCartService.addToCart([]);
   }
 
   getYoYos() {
@@ -29,7 +29,11 @@ export class YoYosComponent implements OnInit {
   }
 
   /*addToCart(yoyo) {
-    this.yoyoCart.unshift(yoyo);
+    this.addToCartService.addToCart(this.yoyo);
   }*/
+
+  addToCart(yoyo) {
+    this.yoyoCart.unshift(yoyo);
+  }
 
 }
