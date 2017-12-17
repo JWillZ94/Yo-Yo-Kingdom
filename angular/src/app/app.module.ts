@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InventoryService } from './services/inventory.service';
 import { AddToCartService } from './services/add-to-cart.service';
 import { ProfileService } from './services/profile.service';
+import { AuthenticationService } from './services/authentication.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -41,7 +42,7 @@ import { YoyoDetailComponent } from './components/yoyo-detail/yoyo-detail.compon
     HttpClientModule,
     FormsModule
   ],
-  providers: [ InventoryService, AddToCartService, ProfileService ],
+  providers: [ InventoryService, AddToCartService, ProfileService, AuthenticationService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

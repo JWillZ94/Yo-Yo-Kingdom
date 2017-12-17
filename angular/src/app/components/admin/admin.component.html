@@ -1,60 +1,60 @@
 <div class="container">
-  <h3>Add Another Yo-Yo</h3> <!-- All the forms share the same input, must change -->
-  <form (ngSubmit)="addYoYo()" #yoyoForm="ngForm">
+  <h3>Add Another Yo-Yo</h3> <!-- All the forms share the same input, put each on different pages -->
+  <form (ngSubmit)="addYoYo()" #yoyoForm1="ngForm">
     <div class="form-group">
       <label for="name">Name: </label>
-      <input type="text" class="form-control" [(ngModel)]="yoyo.name" name="name" required>
+      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.name" name="name" required>
     </div>
     <div class="form-group">
       <label for="description">Description: </label>
-      <input type="text" class="form-control" [(ngModel)]="yoyo.description" name="description" required>
+      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.description" name="description" required>
     </div>
     <div class="form-group">
       <label for="cost">Cost: </label>
-      <input type="number" class="form-control" [(ngModel)]="yoyo.cost" name="cost" required>
+      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.cost" name="cost" required>
     </div>
     <div class="form-group">
       <label for="value">Value: </label>
-      <input type="number" class="form-control" [(ngModel)]="yoyo.value" name="value" required>
+      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.value" name="value" required>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm.form.valid">Add</button>
+      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm1.form.valid">Add</button>
     </div>
   </form>
   <h3>Update Existing Yo-Yo</h3>
-  <form (ngSubmit)="updateYoYo(id)" #yoyoForm="ngForm">
+  <form (ngSubmit)="updateYoYo(id)" #yoyoForm2="ngForm">
     <div class="form-group">
       <label for="id">Id: </label>
-      <input type="text" class="form-control" [(ngModel)]="yoyo.id" name="id" required>
+      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.id" name="id" required>
     </div>
     <div class="form-group">
       <label for="name">Name: </label>
-      <input type="text" class="form-control" [(ngModel)]="yoyo.name" name="name" required>
+      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.name" name="name" required>
     </div>
     <div class="form-group">
       <label for="description">Description: </label>
-      <input type="text" class="form-control" [(ngModel)]="yoyo.description" name="description" required>
+      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.description" name="description" required>
     </div>
     <div class="form-group">
       <label for="cost">Cost: </label>
-      <input type="number" class="form-control" [(ngModel)]="yoyo.cost" name="cost" required>
+      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.cost" name="cost" required>
     </div>
     <div class="form-group">
       <label for="value">Value: </label>
-      <input type="number" class="form-control" [(ngModel)]="yoyo.value" name="value" required>
+      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.value" name="value" required>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm.form.valid">Update</button>
+      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm2.form.valid">Update</button>
     </div>
   </form>
   <h3>Delete Yo-Yo</h3>
-  <form (ngSubmit)="deleteYoYo(id)" #yoyoForm="ngForm">
+  <form (ngSubmit)="deleteYoYo()" #yoyoForm3="ngForm">
     <div class="form-group">
       <label for="id">Id: </label>
-      <input type="text" class="form-control" [(ngModel)]="yoyo.id" name="id" required>
+      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.id" name="id" required>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm.form.valid">Delete</button>
+      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm3.form.valid">Delete</button>
     </div>
   </form>
 </div>

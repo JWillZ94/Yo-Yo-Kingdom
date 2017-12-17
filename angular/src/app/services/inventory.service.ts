@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import 'rxjs/add/operator/map';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { YoYo } from '../../../models/YoYo';
+import { ActivatedRoute } from '@angular/router';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -10,30 +9,30 @@ const httpOptions = {
 
 @Injectable()
 export class InventoryService {
-  yoyo: YoYo;
+  yoyo: any = {};
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
 
   }
 
   getYoYos() { // Grabs the yoyos from the back-end API and brings them to this service, works
-    return this.http.get('http://localhost:3000/yoyo');
+    return this.http.get('http://localhost:3000/api/yoyo');
   }
 
   getYoYo(id) { // works
-    return this.http.get('http://localhost:3000/yoyo/' + id);
+    return this.http.get('http://localhost:3000/api/yoyo/' + id);
   }
 
-  addYoYo() {
-    this.http.post('http://localhost:3000/yoyo', this.yoyo);
+  addYoYo() { // works
+    return this.http.post('http://localhost:3000/api/yoyo', this.yoyo);
   }
 
   updateYoYo(id) {
-    return this.http.put('http://localhost:3000/yoyo/' + id, this.yoyo, httpOptions);
+    return this.http.put('http://localhost:3000/api/yoyo/' + this.yoyo.id, this.yoyo, httpOptions);
   }
 
-  deleteYoYo(id) {
-    return this.http.delete('http://localhost:3000/yoyo/' + id, this.yoyo);
+  deleteYoYo() { // works
+    return this.http.delete('http://localhost:3000/api/yoyo/' + this.yoyo.id, this.yoyo);
   }
 
 }

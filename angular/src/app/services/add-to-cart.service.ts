@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import { YoYo } from '../../../models/YoYo';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class AddToCartService {
-  yoyo: YoYo;
+  yoyo: any = {};
   yoyoCart: any = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  addToCart(yoyo) {
-    return this.yoyoCart.unshift(this.yoyo);
+  addToCart() {
+    return this.http.post('http://localhost:3000/api/cart-item', this.yoyo);
   }
 
   yoyosInCart() {
-    return this.yoyoCart;
+  //  return this.yoyoCart;
   }
 
 }

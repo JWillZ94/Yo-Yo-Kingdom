@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 const userSchema = mongoose.Schema({
   username:{
@@ -11,6 +12,10 @@ const userSchema = mongoose.Schema({
   }
 });
 
+userSchema.plugin(passportLocalMongoose);
+
 const User = module.exports = mongoose.model('User', userSchema);
 
-exports.User = User;
+module.exports.register = (newUser) => { // function to register a new user
+    newUser.save();
+}

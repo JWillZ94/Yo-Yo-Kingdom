@@ -1,9 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { AddToCartService } from '../../services/add-to-cart.service';
 import { InventoryService } from '../../services/inventory.service';
 import { CartComponent } from '../cart/cart.component';
-import { YoYo } from '../../../models/YoYo';
 
 @Component({ // Child to CartComponent
   selector: 'app-yo-yos',
@@ -11,9 +10,9 @@ import { YoYo } from '../../../models/YoYo';
   styleUrls: ['./yo-yos.component.css']
 })
 export class YoYosComponent implements OnInit {
-  yoyos: any;
+  yoyos: any = [];
   yoyoCart: any = [];
-  yoyo: YoYo;
+  yoyo: any = {};
 
 
   constructor(private http: HttpClient, private inventoryService: InventoryService, private addToCartService: AddToCartService) { // uses HttpClient for this component, in this example, connecting to the back-end
@@ -28,12 +27,16 @@ export class YoYosComponent implements OnInit {
       .subscribe(yoyos => this.yoyos = yoyos);
   }
 
-  /*addToCart(yoyo) {
-    this.addToCartService.addToCart(this.yoyo);
-  }*/
-
   addToCart(yoyo) {
-    this.yoyoCart.unshift(yoyo);
+    this.addToCartService.addToCart(this.yoyo)
+      .subscribe(yoyo => this.yoyo = yoyo,
+      (err: HttpErrorResponse) => {
+        if(err.error instanceof Error) {
+          console.log('Front-end error occurred' + err.error.message);
+        } else {
+          console.log('Back-end error occurred..' + err.status + '..body was..' + err.error);
+        }
+      });
   }
 
 }

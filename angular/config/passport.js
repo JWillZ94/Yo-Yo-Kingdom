@@ -1,23 +1,10 @@
-const JwtStrategy = require('passport-jwt').Strategy;
-const ExtractJwt = require('passport-jwt').ExtractJwt;
-const Profile = require('../models/Profile');
-const profile = require('../routes/profile');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+User = require('../models/User');
+user = require('../routes/user');
 
-/*module.exports = (passport) {
-  let opts = {};
-  opts.jwtFromRequest = ExtractJwt.fromAuthHeader();
-  opts.secretOrKey = config.secret;
-  passport.use(new JwtStrategy(opts, (jwt_payload, done) => {
-    Profile.findById(jwt_payload.id, (err, profile) => {
-      if (err) {
-        return done(err, false);
-      }
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
-      if (profile) {
-        return done(null, profile);
-      } else {
-        return done(null, false);
-      }
-    });
-  }));
-}*/
+module.exports = passport;

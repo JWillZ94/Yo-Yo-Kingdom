@@ -1,3 +1,18 @@
 <p>
   <a routerLink="/admin" routerLinkActive="true">Go To Admin</a>
 </p>
+<form (ngSubmit)="loginUser(user)" loginForm="ngForm">
+  <div class="form-group">
+    <label for="username">Username: </label>
+    <input type="text" class="form-control" id="username" name="username" required>
+    <!--<div [hidden]="username.valid || username.pristine" class="alert alert-danger">Username is required!</div>-->
+  </div>
+  <div class="form-group">
+    <label for="password">Password: </label>
+    <input type="password" class="form-control" id="password" name="password" required>
+    <!--<div [hidden]="password.valid || password.pristine" class="alert alert-danger">Password is required!</div>-->
+  </div>
+  <div>
+    <button type="submit" class="btn btn-warning">Login</button>
+  </div>
+</form>

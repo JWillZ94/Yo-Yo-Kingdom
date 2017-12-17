@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Profile } from '../../../models/Profile';
 
 @Injectable()
 export class ProfileService {
-  profile: Profile;
+  profiles: any;
 
   constructor(private http: HttpClient) { }
 
   getProfiles() {
-    this.http.get('http://localhost:3000/profiles');
+    return this.http.get('http://localhost:3000/api/profile');
   }
 
 
