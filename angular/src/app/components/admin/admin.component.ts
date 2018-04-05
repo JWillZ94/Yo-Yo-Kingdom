@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InventoryService } from '../../services/inventory.service';
+import { CreateYoyoService } from '../../services/create-yoyo.service';
+import { UpdateYoyoService } from '../../services/update-yoyo.service';
+import { DeleteYoyoService } from '../../services/delete-yoyo.service';
 
 @Component({
   selector: 'app-admin',
@@ -12,14 +15,22 @@ export class AdminComponent implements OnInit {
   yoyo: any = {};
 
 
-  constructor(private http: HttpClient, private router: Router, private inventoryService: InventoryService, private route: ActivatedRoute) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private inventoryService: InventoryService,
+    private createYoYoService: CreateYoyoService,
+    private updateYoYoService: UpdateYoyoService,
+    private deleteYoYoService: DeleteYoyoService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
 
   }
 
   addYoYo() { // works now, had to make it serviceName.variableName.property in the template
-    this.inventoryService.addYoYo()
+    this.createYoYoService.addYoYo()
       .subscribe(res => this.router.navigate(['/yo-yos']),
       (err: HttpErrorResponse) => {
         if(err.error instanceof Error) {
@@ -31,7 +42,7 @@ export class AdminComponent implements OnInit {
   }
 
   updateYoYo(id) { // works
-    this.inventoryService.updateYoYo(id)
+    this.updateYoYoService.updateYoYo(id)
       .subscribe(res => this.router.navigate(['/yo-yos']),
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
@@ -43,7 +54,7 @@ export class AdminComponent implements OnInit {
   }
 
   deleteYoYo() { // works
-    this.inventoryService.deleteYoYo()
+    this.deleteYoYoService.deleteYoYo()
       .subscribe(res => this.router.navigate(['/yo-yos']),
       (err: HttpErrorResponse) => {
         if(err.error instanceof Error) {

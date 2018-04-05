@@ -1,7 +1,50 @@
-#first {
-  
+.carousel-item {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
-#second {
-  background-color: pink;
+.carousel-item img {
+  margin: auto;
+}
+
+#featured {
+  font-size: 2em;
+  margin: 2rem 3rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.featured-img-1 {
+  cursor: pointer;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.featured-img-2 {
+  cursor: pointer;
+  animation-name: spin;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.featured-img-3 {
+  cursor: pointer;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.modal-body img {
+  margin-right: 1.5rem;
 }

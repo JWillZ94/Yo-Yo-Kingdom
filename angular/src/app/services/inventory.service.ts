@@ -23,16 +23,4 @@ export class InventoryService {
     return this.http.get('http://localhost:3000/api/yoyo/' + id);
   }
 
-  addYoYo() { // works
-    return this.http.post('http://localhost:3000/api/yoyo', this.yoyo);
-  }
-
-  updateYoYo(id) {
-    return this.http.put('http://localhost:3000/api/yoyo/' + this.yoyo.id, this.yoyo, httpOptions);
-  }
-
-  deleteYoYo() { // works
-    return this.http.delete('http://localhost:3000/api/yoyo/' + this.yoyo.id, this.yoyo);
-  }
-
 }

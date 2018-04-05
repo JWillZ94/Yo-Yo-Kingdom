@@ -1,60 +1,69 @@
-<div class="container">
-  <h3>Add Another Yo-Yo</h3> <!-- All the forms share the same input, put each on different pages -->
-  <form (ngSubmit)="addYoYo()" #yoyoForm1="ngForm">
-    <div class="form-group">
-      <label for="name">Name: </label>
-      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="description">Description: </label>
-      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.description" name="description" required>
-    </div>
-    <div class="form-group">
-      <label for="cost">Cost: </label>
-      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.cost" name="cost" required>
-    </div>
-    <div class="form-group">
-      <label for="value">Value: </label>
-      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.value" name="value" required>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm1.form.valid">Add</button>
-    </div>
-  </form>
-  <h3>Update Existing Yo-Yo</h3>
-  <form (ngSubmit)="updateYoYo(id)" #yoyoForm2="ngForm">
-    <div class="form-group">
-      <label for="id">Id: </label>
-      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.id" name="id" required>
-    </div>
-    <div class="form-group">
-      <label for="name">Name: </label>
-      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="description">Description: </label>
-      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.description" name="description" required>
-    </div>
-    <div class="form-group">
-      <label for="cost">Cost: </label>
-      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.cost" name="cost" required>
-    </div>
-    <div class="form-group">
-      <label for="value">Value: </label>
-      <input type="number" class="form-control" [(ngModel)]="inventoryService.yoyo.value" name="value" required>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm2.form.valid">Update</button>
-    </div>
-  </form>
-  <h3>Delete Yo-Yo</h3>
-  <form (ngSubmit)="deleteYoYo()" #yoyoForm3="ngForm">
-    <div class="form-group">
-      <label for="id">Id: </label>
-      <input type="text" class="form-control" [(ngModel)]="inventoryService.yoyo.id" name="id" required>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm3.form.valid">Delete</button>
-    </div>
-  </form>
+<div class="container d-flex justify-content-around">
+  <div class="section-1">
+    <h3 class="yellow-print edit-section">Add Another Yo-Yo</h3>
+    <form (ngSubmit)="addYoYo()" #yoyoForm1="ngForm">
+      <br>
+      <div class="form-group">
+        <label class="yellow-print" for="name">Name: </label>
+        <input type="text" class="form-control" [(ngModel)]="createYoYoService.yoyo.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="description">Description: </label>
+        <input type="text" class="form-control" [(ngModel)]="createYoYoService.yoyo.description" name="description" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="cost">Cost: </label>
+        <input type="number" class="form-control" [(ngModel)]="createYoYoService.yoyo.cost" name="cost" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="value">Value: </label>
+        <input type="number" class="form-control" [(ngModel)]="createYoYoService.yoyo.value" name="value" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm1.form.valid">Add</button>
+      </div>
+    </form>
+  </div>
+  <div class="section-2">
+    <h3 class="yellow-print edit-section">Update Existing Yo-Yo</h3>
+    <form (ngSubmit)="updateYoYo(id)" #yoyoForm2="ngForm">
+      <br>
+      <div class="form-group">
+        <label class="yellow-print" for="id">Id: </label>
+        <input type="text" class="form-control" [(ngModel)]="updateYoYoService.yoyo.id" name="id" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="name">Name: </label>
+        <input type="text" class="form-control" [(ngModel)]="updateYoYoService.yoyo.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="description">Description: </label>
+        <input type="text" class="form-control" [(ngModel)]="updateYoYoService.yoyo.description" name="description" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="cost">Cost: </label>
+        <input type="number" class="form-control" [(ngModel)]="updateYoYoService.yoyo.cost" name="cost" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="value">Value: </label>
+        <input type="number" class="form-control" [(ngModel)]="updateYoYoService.yoyo.value" name="value" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm2.form.valid">Update</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <h3 class="yellow-print edit-section">Delete Yo-Yo</h3>
+    <form (ngSubmit)="deleteYoYo()" #yoyoForm3="ngForm">
+      <br>
+      <div class="form-group">
+        <label class="yellow-print" for="id">Id: </label>
+        <input type="text" class="form-control" [(ngModel)]="deleteYoYoService.yoyo.id" name="id" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-warning" [disabled]="!yoyoForm3.form.valid">Delete</button>
+      </div>
+    </form>
+  </div>
 </div>

@@ -1,0 +1,18 @@
+.yellow-print {
+  color: #ffff66;
+  text-shadow: black 2px 2px 2px;
+}
+
+.edit-section {
+  cursor: pointer;
+}
+
+.section-1 {
+  border-right: #ffff66 solid 2px;
+  padding-right: 5em;
+}
+
+.section-2 {
+  border-right: #ffff66 solid 2px;
+  padding-right: 5em;
+}

@@ -1,7 +1,41 @@
 #header {
   background: #ffff66;
+  margin-top: 2rem;
+  border-radius: 30px;
+}
+
+@keyframes hover-effect {
+  0% {
+    font-size: 1em;
+  }
+
+  50% {
+    font-size: 1.2em;
+    padding: 0px;
+  }
+
+  100% {
+    font-size: 1em;
+  }
+}
+
+.nav-link:hover {
+  animation-name: hover-effect;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.yellow-print {
+  color: #ffff66;
+  text-shadow: black 2px 2px 2px;
 }
 
 #footer {
   background: #ffff66;
+  margin-bottom: 2rem;
+  border-radius: 30px;
+}
+
+#footer p {
+  padding-top: 1rem;
 }

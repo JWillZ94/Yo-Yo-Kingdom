@@ -1,33 +1,27 @@
 <div class="container-fluid">
   <div class="row d-flex justify-content-around" id="header">
-    <div class="col-3">
-      <img class="container" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
-    </div>
     <div class="col-6">
       <h1 class="display-1 text-center">Yo-Yo Kingdom</h1>
       <p class="lead text-center">The World's #1 Yo-Yo showcase!</p>
-    </div>
-    <div class="col-3">
-      <img class="container" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
     </div>
   </div>
   <div class="row d-flex">
     <div class="col d-flex justify-content-center">
       <nav class="navbar navbar-expand-sm navbar-dark">
-        <ul class="navbar-nav mr-auto h4">
+        <ul class="navbar-nav mr-auto h4 pb-5">
           <li class="nav-item px-4">
             <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
               Home
             </a>
           </li>
           <li class="nav-item px-4">
-            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/admin" routerLinkActive="active">
-              Edit Yo-Yo's
+            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/yo-yos" routerLinkActive="active">
+              Yo-Yo's
             </a>
           </li>
           <li class="nav-item px-4">
-            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/yo-yos" routerLinkActive="active">
-              Yo-Yo's
+            <a href="" class="nav-link" style="color: #ffff66; text-shadow: black 2px 2px 2px;" routerLink="/admin" routerLinkActive="active">
+              Edit Yo-Yo's
             </a>
           </li>
           <li class="nav-item px-4">
@@ -41,12 +35,8 @@
   </div>
   <router-outlet></router-outlet>
   <div class="row my-5 d-flex justify-content-center" id="footer">
-    <div class="col-3">
-      <img class="container" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
-    </div>
-    <div class="col-6"></div>
-    <div class="col-3">
-      <img class="container" src="../../assets/yoyo.jpg" width="250" alt="yo yo img">
+    <div class="col-6">
+      <p>Join us for the upcoming World Yo-Yo Championships in April 2089 at Roverville, Mars!</p>
     </div>
   </div>
 </div>

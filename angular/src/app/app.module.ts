@@ -9,6 +9,9 @@ import { InventoryService } from './services/inventory.service';
 import { AddToCartService } from './services/add-to-cart.service';
 import { ProfileService } from './services/profile.service';
 import { AuthenticationService } from './services/authentication.service';
+import { CreateYoyoService } from './services/create-yoyo.service';
+import { UpdateYoyoService } from './services/update-yoyo.service';
+import { DeleteYoyoService } from './services/delete-yoyo.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -42,7 +45,15 @@ import { YoyoDetailComponent } from './components/yoyo-detail/yoyo-detail.compon
     HttpClientModule,
     FormsModule
   ],
-  providers: [ InventoryService, AddToCartService, ProfileService, AuthenticationService ],
+  providers: [
+    InventoryService,
+    AddToCartService,
+    ProfileService,
+    AuthenticationService,
+    CreateYoyoService,
+    UpdateYoyoService,
+    DeleteYoyoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

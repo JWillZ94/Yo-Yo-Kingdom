@@ -1,19 +1,107 @@
 <div class="container-fluid">
   <div class="row d-flex justify-content-center">
-    <div class="col-6 d-flex justify-content-center">
-      <img class="" src="../../assets/Mega Mind Yo-Yo.jpg" alt="yo-yo img" height="400px">
+    <div id="myCarousel" class="carousel slide col-6 d-flex justify-content-center" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="http://www.yo-yo.com/Shared/Images/Product/Butterfly-XT/Duncan_YoYo_Butterfly_XT_3514XP-RD1-a.png" class="d-block" alt="yo-yo img" height="400px">
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://cdn.top-toy.com/medias/media-000000000102585002-.png-800Wx584H?context=bWFzdGVyfGltYWdlc3wzMjA4NDR8aW1hZ2UvcG5nfGltYWdlcy9oOTEvaDg3Lzg5MDU3NjA4MDA3OTgucG5nfDA3NWYxN2ZjM2I0Y2ExYWU1YjAyZDI1YWJmMzAwZTk4NGQzODYyYjQ5MWQ1ZDk2ZmI3MjI3MjcwMTBhZTE0ODk" class="d-block" alt="yo-yo img" height="400px">
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Yo-yo.png" class="d-block" alt="yo-yo img" height="400px">
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://www.yo-yo.com/Shared/Images/Product/Limelight-Yo-Yo/Duncan_YoYo_Lime_Light_Yo-Yo_3517LL-GR1-a.png" class="d-block" alt="yo-yo img" height="400px">
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://cdn8.bigcommerce.com/s-8ndhalpa/images/stencil/500x659/products/213/2597/ProZ_Red_Wht_3516XP__82972.1416328390.png?c=2" class="d-block" alt="yo-yo img" height="400px">
+        </div>
+      </div>
     </div>
   </div>
   <div class="row d-flex justify-content-center">
     <div class="col-6 d-flex">
-      <h5>Featured</h5>
+      <h5 id="featured" style="color: #ffff66; text-shadow: black 2px 2px 2px;">Featured Yo-Yo's</h5>
     </div>
   </div>
   <div class="row d-flex justify-content-center">
     <div class="col-6 d-flex justify-content-around">
-      <img class="" src="../../assets/Midas' Yo-Yo.jpg" alt="yo-yo img" height="200px" width="200px">
-      <img class="" src="../../assets/Rim Yo-Yo.png" alt="yo-yo img" height="200px" width="200px">
-      <img class="" src="../../assets/Crimson Knight Yo-Yo.jpg" alt="yo-yo img" height="200px" width="200px">
+      <img class="featured-img-1" src="http://www.tomkuhn.com/wp-content/uploads/2014/09/SB4-face-400X400.png" alt="yo-yo img" height="200px" width="200px" data-toggle="modal" data-target="#modal-1">
+      <div id="modal-1" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center">Titanium Cranium</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body d-flex justify-content-around">
+              <img src="http://www.tomkuhn.com/wp-content/uploads/2014/09/SB4-face-400X400.png" alt="yo-yo img" height="200px" width="200px">
+              <p class="align-self-center">A durable yo-yo that can withstand all harsh environments. This yo-yo shreds and never breaks since it is made with the world's strongest titanium.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img class="featured-img-2" src="../../assets/Rim Yo-Yo.png" alt="yo-yo img" height="200px" width="200px" data-toggle="modal" data-target="#modal-2">
+      <div id="modal-2" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center">The Crimson Rim</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body d-flex justify-content-around">
+              <img src="../../assets/Rim Yo-Yo.png" alt="yo-yo img" height="200px" width="200px">
+              <p class="align-self-center">This yo-yo is for anyone who wants to show off their love for cars and their sense of style. The bling-bling will definitely turn heads.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img class="featured-img-3" src="https://3.bp.blogspot.com/-yzAG2S0rVVQ/V5B-Rq0MojI/AAAAAAAABEs/QABQt9fkPNAuEFvGjIf0QB0WpMxhgPUogCKgB/s1600/n5.png" alt="yo-yo img" height="200px" width="200px" data-toggle="modal" data-target="#modal-3">
+      <div id="modal-3" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center">Desperado N5</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body d-flex justify-content-around">
+              <img  src="https://3.bp.blogspot.com/-yzAG2S0rVVQ/V5B-Rq0MojI/AAAAAAAABEs/QABQt9fkPNAuEFvGjIf0QB0WpMxhgPUogCKgB/s1600/n5.png" alt="yo-yo img" height="200px" width="200px">
+              <p class="align-self-center">This is the rejuvenated legendary Desperado yo-yo that was used by the 5-time World Yo-Yo Tricks champion, Desperado. It's a yo-yo worthy of being showcased instead of used.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

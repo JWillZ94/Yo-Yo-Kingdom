@@ -17,7 +17,7 @@ export class YoyoDetailComponent implements OnInit {
     this.getYoYo(this.route.snapshot.params['id']);
   }
 
-  getYoYo(id) { // stopped working since i updated the updateYoYo
+  getYoYo(id) { 
     this.inventoryService.getYoYo(id)
       .subscribe(yoyo => this.yoyo = yoyo);
   }
