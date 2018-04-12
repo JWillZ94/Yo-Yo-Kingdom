@@ -2,6 +2,7 @@
   background: #ffff66;
   margin-top: 2rem;
   border-radius: 30px;
+  max-width: auto;
 }
 
 @keyframes hover-effect {
@@ -38,4 +39,46 @@
 
 #footer p {
   padding-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  .nav-link {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 625px) {
+  .nav-link {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 560px) {
+  #title {
+    font-size: 4em;
+  }
+  #subtitle {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 420px) {
+  #title {
+    font-size: 3em;
+  }
+  #subtitle {
+    font-size: 1em;
+  }
+  #footer-text {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 360px) {
+  #title {
+    font-size: 2.5em;
+  }
+  #subtitle {
+    font-size: 0.8em;
+  }
 }

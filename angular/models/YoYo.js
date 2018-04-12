@@ -1,6 +1,10 @@
 const mongoose = require('mongoose'); // Brings in mongoose library to use
 
 const yoyoSchema = mongoose.Schema({ // The schema, or frame for the info of the yo-yo's for sale
+  img:{
+    type: String,
+    required: true
+  },
   name:{
     type: String,
     required: true

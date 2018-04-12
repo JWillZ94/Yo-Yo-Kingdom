@@ -3,6 +3,10 @@
   text-shadow: black 2px 2px 2px;
 }
 
+ul {
+  border-right: #ffff66 solid 2px;
+}
+
 li {
   list-style-type: none;
   font-size: 1.5em;
@@ -26,4 +30,46 @@ li {
 
 .yoyo-value {
   margin-bottom: 5rem;
+}
+
+@media (max-width: 775px) {
+  .yoyo-img {
+    max-width: 200px;
+  }
+  .form-control {
+    width: 200px;
+  }
+}
+
+@media (max-width: 615px) {
+  .form-control {
+    width: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .yoyo-description {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 450px) {
+  .form-control {
+    width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .yoyo-img {
+    max-width: 150px;
+  }
+  .edit-section {
+    font-size: 1em;
+  }
+  .yoyo-description {
+    font-size: 0.7em;
+  }
+  .form-group label {
+    font-size: 0.7em;
+  }
 }

@@ -1,6 +1,6 @@
-<div class="container d-flex justify-content-center">
-  <ul class="d-flex flex-column align-items-center">
-    <img class="yoyo-img yellow-print" src="" alt="yo yo image">
+<div class="container d-flex justify-content-around">
+  <ul class="d-flex flex-column align-items-center col-7">
+    <img class="yoyo-img yellow-print" src="{{yoyo.img}}" alt="yo yo image" width="400">
     <br>
     <li class="yoyo-name">{{yoyo.name}}</li>
     <br>
@@ -10,4 +10,37 @@
     <br>
     <li class="yellow-print yoyo-value">Value: {{yoyo.value}}/100</li>
   </ul>
+  <div class="section-2 col-4">
+    <h3 class="yellow-print edit-section">Update Existing Yo-Yo</h3>
+    <form (ngSubmit)="updateYoYo(id)" #editForm="ngForm">
+      <br>
+      <div class="form-group">
+        <label class="yellow-print" for="id">Id: </label>
+        <input type="text" class="form-control" [(ngModel)]="updateYoYoService.yoyo.id" name="id" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="img">Image URL: </label>
+        <input type="text" class="form-control" [(ngModel)]="updateYoYoService.yoyo.img" name="img" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="name">Name: </label>
+        <input type="text" class="form-control" [(ngModel)]="updateYoYoService.yoyo.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="description">Description: </label>
+        <input type="text" class="form-control" [(ngModel)]="updateYoYoService.yoyo.description" name="description" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="cost">Cost: </label>
+        <input type="number" class="form-control" [(ngModel)]="updateYoYoService.yoyo.cost" name="cost" required>
+      </div>
+      <div class="form-group">
+        <label class="yellow-print" for="value">Value: </label>
+        <input type="number" class="form-control" [(ngModel)]="updateYoYoService.yoyo.value" name="value" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-warning" [disabled]="!editForm.form.valid">Update</button>
+      </div>
+    </form>
+  </div>
 </div>

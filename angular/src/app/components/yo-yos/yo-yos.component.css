@@ -31,3 +31,17 @@ li {
 .yoyo-value {
   margin-bottom: 5rem;
 }
+
+@media (max-width: 1000px) {
+  .yoyo-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .yoyo-list {
+    max-width: 60%;
+  }
+}

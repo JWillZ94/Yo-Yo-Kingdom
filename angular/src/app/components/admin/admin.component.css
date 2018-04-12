@@ -9,10 +9,57 @@
 
 .section-1 {
   border-right: #ffff66 solid 2px;
-  padding-right: 5em;
+  padding-right: 14rem;
+  max-width: auto;
 }
 
-.section-2 {
-  border-right: #ffff66 solid 2px;
-  padding-right: 5em;
+@media (max-width: 1000px) {
+  .section-1 {
+    padding-right: 10rem;
+  }
+  .section-2 {
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .section-1 {
+    padding-right: 1rem;
+  }
+  .section-2 {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .edit-section {
+    font-size: 1em;
+  }
+  .form-control {
+    width: 150px;
+  }
+}
+
+@media (max-width: 385px) {
+  .section-1 {
+    padding-right: 0.2rem;
+  }
+  .section-2 {
+    padding-left: 0.2rem;
+  }
+  .edit-section {
+    font-size: 1em;
+  }
+  .form-control {
+    width: 150px;
+  }
+}
+
+@media (max-width: 330px) {
+  .form-control {
+    width: 100px;
+  }
+  .edit-section {
+    font-size: 0.8em;
+  }
 }
