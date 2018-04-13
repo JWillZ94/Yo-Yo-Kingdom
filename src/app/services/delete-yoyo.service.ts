@@ -10,7 +10,7 @@ export class DeleteYoyoService {
   }
 
   deleteYoYo() {
-    return this.http.delete('http://localhost:3000/api/yoyo/' + this.yoyo.id, this.yoyo);
+    return this.http.delete('api/yoyo/' + this.yoyo.id, this.yoyo);
   }
 
 }

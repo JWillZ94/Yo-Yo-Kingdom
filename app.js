@@ -39,13 +39,13 @@ app.get('*', (req, res) => {
 app.set('json spaces', 2); // makes the json formatted info pretty
 
 // Server
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '8080';
 app.set('port', port);
 
 const server = http.createServer(app);
 
 server.listen(port, () => {
-  console.log('backend is good');
+  console.log('backend connected');
 });
 
 module.exports = app; // Exposes the app to other files.

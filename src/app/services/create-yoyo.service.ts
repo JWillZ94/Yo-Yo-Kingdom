@@ -9,8 +9,8 @@ export class CreateYoyoService {
 
   }
 
-  addYoYo() { 
-    return this.http.post('http://localhost:3000/api/yoyo', this.yoyo);
+  addYoYo() {
+    return this.http.post('api/yoyo', this.yoyo);
   }
 
 }

@@ -14,7 +14,7 @@ export class UpdateYoyoService {
   }
 
   updateYoYo(id) {
-    return this.http.put('http://localhost:3000/api/yoyo/' + this.yoyo.id, this.yoyo, httpOptions);
+    return this.http.put('api/yoyo/' + this.yoyo.id, this.yoyo, httpOptions);
   }
 
 }

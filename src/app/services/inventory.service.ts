@@ -16,11 +16,11 @@ export class InventoryService {
   }
 
   getYoYos() { // Grabs the yoyos from the back-end API and brings them to this service, works
-    return this.http.get('http://localhost:3000/api/yoyo');
+    return this.http.get('api/yoyo');
   }
 
   getYoYo(id) { // works
-    return this.http.get('http://localhost:3000/api/yoyo/' + id);
+    return this.http.get('api/yoyo/' + id);
   }
 
 }
