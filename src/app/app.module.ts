@@ -6,9 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { InventoryService } from './services/inventory.service';
-import { AddToCartService } from './services/add-to-cart.service';
-import { ProfileService } from './services/profile.service';
-import { AuthenticationService } from './services/authentication.service';
 import { CreateYoyoService } from './services/create-yoyo.service';
 import { UpdateYoyoService } from './services/update-yoyo.service';
 import { DeleteYoyoService } from './services/delete-yoyo.service';
@@ -16,11 +13,7 @@ import { DeleteYoyoService } from './services/delete-yoyo.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { YoYosComponent } from './components/yo-yos/yo-yos.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
-import { CartComponent } from './components/cart/cart.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { YoyoDetailComponent } from './components/yoyo-detail/yoyo-detail.component';
 
@@ -31,11 +24,7 @@ import { YoyoDetailComponent } from './components/yoyo-detail/yoyo-detail.compon
     AppComponent,
     HomeComponent,
     YoYosComponent,
-    ProfileComponent,
     AboutComponent,
-    CartComponent,
-    SignUpComponent,
-    LoginComponent,
     AdminComponent,
     YoyoDetailComponent
   ],
@@ -47,9 +36,6 @@ import { YoyoDetailComponent } from './components/yoyo-detail/yoyo-detail.compon
   ],
   providers: [
     InventoryService,
-    AddToCartService,
-    ProfileService,
-    AuthenticationService,
     CreateYoyoService,
     UpdateYoyoService,
     DeleteYoyoService
