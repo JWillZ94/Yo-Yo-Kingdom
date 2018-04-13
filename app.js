@@ -32,7 +32,7 @@ app.use('/api/yoyo', yoyo); // links API to /api/yoyo route
 
 // Send all other requests to angular app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // JSON "Pretty" format
