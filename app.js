@@ -12,7 +12,7 @@ var yoyo = require('./routes/yoyo'); // the API for the yoyos
 
 // Mongoose, splits one database into multiple collections
 YoYo = require('./models/YoYo'); // brings in the yoyos collection model
-mongoose.connect('mongodb://localhost/yoyostore');
+mongoose.connect('mongodb://JWillZ94:104280Jw@ds157444.mlab.com:57444/yoyostore');
 var db = mongoose.connection; // links the mongoose connection to a variable
 db.on('error', console.error.bind(console, 'unfortunate connection error:')); // Tests if theres a connection error
 db.once('open', () => { // Lets me know when database is successfully connected
